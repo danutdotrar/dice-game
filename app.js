@@ -9,12 +9,19 @@ const score1Elem = document.querySelector('#score--1');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const btnNew = document.querySelector('.btn--new');
+const btnHow = document.querySelector('.btn--how');
 
 const currentScore0 = document.querySelector('#current--0');
 const currentScore1 = document.querySelector('#current--1');
 
 const player0Elem = document.querySelector('.player--0');
 const player1Elem = document.querySelector('.player--1');
+
+const modal = document.querySelector('.modal');
+const overlay= document.querySelector('.overlay');
+const btnClose = document.querySelector('.close-modal');
+const btnsOpenModal = document.querySelectorAll('.show-modal');
+
 
 // Set the current score to 0
 let currentScore = 0;
@@ -118,7 +125,7 @@ function holdScore() {
         document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
         // Check if player's score is >= 100
-        if (scores[activePlayer] >= 50) {
+        if (scores[activePlayer] >= 25) {
             playing = false;
 
             // Finish game
@@ -132,6 +139,35 @@ function holdScore() {
         }
     }
 }
+
+function openModal() {
+    console.log(`Button clicked: ${this.textContent}`);
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+};
+
+// Close the modal
+function closeModal() {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+};
+
+// Close the modal at ESC press
+function closeModalEsc(e) {
+    // Daca ESC este apasat si clasa modal nu contine hidden
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+    }
+};
+
+// Close modal with ESC press
+document.addEventListener('keydown', closeModalEsc);
+
+overlay.addEventListener('click', closeModal); 
+
+btnClose.addEventListener('click', closeModal);
+
+btnHow.addEventListener('click', openModal);
 
 btnNew.addEventListener('click', resetGame);
 
