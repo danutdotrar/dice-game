@@ -18,6 +18,7 @@ body {
     color: rgb(0, 0, 0);
     background-image: linear-gradient(to top, #59006a 0%, #d60067 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -191,7 +192,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
-    height: 50%;
+    height: 70%;
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
@@ -226,14 +227,35 @@ main {
 }
 
 h1 {
+    text-align: center;
     font-size: 2.5rem;
     /* padding: 1rem; */
 }
 
-p {
+.text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list {
+    width: 50%;
+    margin-left: 2rem;
     padding-top: 2rem;
     font-size: 1.8rem;
-    /* letter-spacing: 1px; */
+}
+
+.summary {
+    width: 70%;
+    padding-top: 3rem;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+li {
+    padding: 0.5rem;
 }
 
 /* CLASSES TO MAKE MODAL WORK */
@@ -250,4 +272,18 @@ p {
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     z-index: 1;
+}
+
+.footer {
+    font-size: 22px;
+    bottom: 1rem;
+    position:fixed;
+}
+
+a {
+    color: #000000;
+}
+a:hover {
+    transition: 1s;
+    color:#c7365f;
 }

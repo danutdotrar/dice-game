@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://kit.fontawesome.com/4c536a6bd5.js"
+    crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css">
     <title>Dice Game</title>
 </head>
@@ -41,24 +45,33 @@
     </main>
 
     <div class="modal hidden">
-        <h1>I'm a modal window</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
-        </p>
+        <h1>Instructions</h1>
+
+        <div class="text">
+            <ol class="list">
+                <li>When the player presses 'Roll Dice', the 'CURRENT' tab will hold the current score, based on the sum of the dices.</li>
+                <li>If one of the dices is 1, the current score will be lost and it will be the next player turn to roll the dices.</li>
+                <li>If the player presses 'Hold' before one of the dices hits 1, the current score will be saved to the main score, and then the turn will be switched to the next player.</li>
+                <li>First to main score 25 wins :)</li>
+            </ol> 
+            <p class="summary">
+                The scope of the game is to get to 25 points, and on each round hold the current score before one of the dices hits 1.
+            </p>
+        </div>
+
         <button class="close-modal">Close</button>
     </div>
 
     <div class="overlay hidden"></div>
 
+    <footer class="footer">
+        <p>
+            danut morarasu
+            <a href="https://github.com/danutdotrar" target="_blank">
+                <i class="fab fa-github"></i
+            ></a>
+        </p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>

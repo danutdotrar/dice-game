@@ -160,7 +160,7 @@ function closeModalEsc(e) {
     }
 };
 
-// Close modal with ESC press
+
 document.addEventListener('keydown', closeModalEsc);
 
 overlay.addEventListener('click', closeModal); 
