@@ -154,7 +154,6 @@ function closeModal() {
 
 // Close the modal at ESC press
 function closeModalEsc(e) {
-    // Daca ESC este apasat si clasa modal nu contine hidden
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
             closeModal();
     }
