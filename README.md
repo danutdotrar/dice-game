@@ -17,3 +17,5 @@ The scope of the game is to get to 25 points, and on each round hold the current
 
 Link: https://dm-dice-game.netlify.app
   
+  ![image](https://user-images.githubusercontent.com/73365022/206266169-16d28730-7241-4357-abbd-c5dbe7d6702c.png)
+
